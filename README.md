@@ -9,10 +9,10 @@ The API focuses on implementing core **CRUD operations** (Create, Read, Update, 
 
 ### 🚀 **Features**
 The API includes the following features:
-* ➕ Create a task (id?, title, description, status?, created?, updated?)
-* ✏️ Update a task (title?, description?)
-* 🔄 Change task status  (todo, waiting, completed)
-* 📋 Retrieve tasks filtered by status (todo, waiting, completed)
+* ➕ Create a task (id?, content, status?, created?, updated?)
+* ✏️ Update a task (content?)
+* 🔄 Change task status  (active, complete)
+* 📋 Retrieve tasks filtered by status (active, complete)
 
 ---
 
@@ -26,14 +26,19 @@ The API includes the following features:
 ### 🧱 **Data Model**
 **Task Entity**
 
-| Field         | Type     | Description                                 |
-| ------------- | -------- | ------------------------------------------- |
-| `id`          | UUID     | Unique identifier of the task               |
-| `title`       | String   | Task title                                  |
-| `description` | String   | Task description                            |
-| `status`      | Enum     | Task status: `todo`, `waiting`, `completed` |
-| `created`     | DateTime | Task creation date                          |
-| `updated`     | DateTime | Last update date                            |
+| Field     | Type     | Description                       |
+|-----------| -------- |-----------------------------------|
+| `id`      | UUID     | Unique identifier of the task     |
+| `content`  | String   | Task content                       |
+| `status`  | Enum     | Task status: `active`, `complete` |
+| `created` | DateTime | Task creation date                |
+| `updated` | DateTime | Last update date                  |
+
+---
+
+### URL Documentation
+* **Docs :** [https://todo-list-api.fastapicloud.dev/docs](https://todo-list-api.fastapicloud.dev/docs)
+* **Redocs :** [https://todo-list-api.fastapicloud.dev/redoc](https://todo-list-api.fastapicloud.dev/redoc)
 
 ---
 
@@ -54,10 +59,10 @@ L’API est principalement basée sur les opérations **CRUD** (Créer, Lire, Me
 ### 🚀 **Fonctionnalités**
 Les fonctionnalités principales sont :
 
-* ➕ Ajouter une tâche (id?, title, description, status?, created?, updated?)
-* ✏️ Modifier une tâche (title?, description?)
-* 🔄 Changer le statut d’une tâche (todo, waiting, completed)
-* 📋 Afficher les tâches selon leur statut (todo, waiting, completed)
+* ➕ Ajouter une tâche (id?, content, status?, created?, updated?)
+* ✏️ Modifier une tâche (content?)
+* 🔄 Changer le statut d’une tâche (active, complete)
+* 📋 Afficher les tâches selon leur statut (active, complete)
 
 ---
 
@@ -71,14 +76,19 @@ Les fonctionnalités principales sont :
 ### 🧱 **Modèle de données**
 **Entité Task**
 
-| Champ         | Type     | Description                             |
-| ------------- | -------- | --------------------------------------- |
-| `id`          | UUID     | Identifiant unique de la tâche          |
-| `title`       | String   | Titre de la tâche                       |
-| `description` | String   | Description de la tâche                 |
-| `status`      | Enum     | Statut : `todo`, `waiting`, `completed` |
-| `created`     | DateTime | Date de création                        |
-| `updated`     | DateTime | Date de dernière mise à jour            |
+| Champ     | Type     | Description                    |
+|-----------| -------- |--------------------------------|
+| `id`      | UUID     | Identifiant unique de la tâche |
+| `content` | String   | Contenu de la tâche            |
+| `status`  | Enum     | Statut : `active`, `complete`  |
+| `created` | DateTime | Date de création               |
+| `updated` | DateTime | Date de dernière mise à jour   |
+
+---
+
+### URL Documentation
+* **Docs :** [https://todo-list-api.fastapicloud.dev/docs](https://todo-list-api.fastapicloud.dev/docs)
+* **Redocs :** [https://todo-list-api.fastapicloud.dev/redoc](https://todo-list-api.fastapicloud.dev/redoc)
 
 ---
 
