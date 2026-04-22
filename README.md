@@ -9,10 +9,16 @@ The API focuses on implementing core **CRUD operations** (Create, Read, Update, 
 
 ### 🚀 **Features**
 The API includes the following features:
-* ➕ Create a task (id?, content, status?, created?, updated?)
-* ✏️ Update a task (content?)
-* 🔄 Change task status  (active, complete)
-* 📋 Retrieve tasks filtered by status (active, complete)
+#### 👤 **User Management**
+* ➕ Register a user (`id?`, `name`, `email`, `password`)
+* 🔐 Login user
+* 👤 Get current user profile (`me`) via JWT token
+* 🚪 Logout use
+#### ✅ **Task Management**
+* ➕ Create a task (`id?`, `title`, `description?`, `status?`, `created?`, `updated?`)
+* ✏️ Update a task (`title?`, `description?`)
+* 🔄 Change task status (`active`, `complete`)
+* 📋 Retrieve tasks filtered by status (`active`, `complete`)
 
 ---
 
@@ -24,15 +30,25 @@ The API includes the following features:
 ---
 
 ### 🧱 **Data Model**
-**Task Entity**
+👤 **User Entity**
 
-| Field     | Type     | Description                       |
-|-----------| -------- |-----------------------------------|
-| `id`      | UUID     | Unique identifier of the task     |
-| `content`  | String   | Task content                       |
-| `status`  | Enum     | Task status: `active`, `complete` |
-| `created` | DateTime | Task creation date                |
-| `updated` | DateTime | Last update date                  |
+| Field      | Type   | Description                   |
+| ---------- | ------ | ----------------------------- |
+| `id`       | UUID   | Unique identifier of the user |
+| `name`     | String | User full name                |
+| `email`    | String | User email address            |
+| `password` | String | Hashed password               |
+
+✅ **Task Entity**
+
+| Field         | Type     | Description                   |
+| ------------- | -------- | ----------------------------- |
+| `id`          | Int      | Unique identifier of the task |
+| `title`       | String   | Task title                    |
+| `description` | String   | Task description              |
+| `status`      | Enum     | `active` or `complete`        |
+| `created`     | DateTime | Creation timestamp            |
+| `updated`     | DateTime | Last update timestamp         |
 
 ---
 
@@ -59,10 +75,17 @@ L’API est principalement basée sur les opérations **CRUD** (Créer, Lire, Me
 ### 🚀 **Fonctionnalités**
 Les fonctionnalités principales sont :
 
-* ➕ Ajouter une tâche (id?, content, status?, created?, updated?)
-* ✏️ Modifier une tâche (content?)
-* 🔄 Changer le statut d’une tâche (active, complete)
-* 📋 Afficher les tâches selon leur statut (active, complete)
+#### 👤 **Gestion des utilisateurs**
+* ➕ Inscription d’un utilisateur (`id?`, `name`, `email`, `password`)
+* 🔐 Connexion utilisateur
+* 👤 Récupération du profil utilisateur connecté (`me`) via JWT
+* 🚪 Déconnexion utilisateur
+
+#### ✅ **Gestion des tâches**
+* ➕ Création d’une tâche (`id?`, `title`, `description?`, `status?`, `created?`, `updated?`)
+* ✏️ Modification d’une tâche (`title?`, `description?`)
+* 🔄 Changement du statut d’une tâche (`active`, `complete`)
+* 📋 Récupération des tâches filtrées par statut
 
 ---
 
@@ -74,15 +97,25 @@ Les fonctionnalités principales sont :
 ---
 
 ### 🧱 **Modèle de données**
-**Entité Task**
+👤 **Entité User**
 
-| Champ     | Type     | Description                    |
-|-----------| -------- |--------------------------------|
-| `id`      | UUID     | Identifiant unique de la tâche |
-| `content` | String   | Contenu de la tâche            |
-| `status`  | Enum     | Statut : `active`, `complete`  |
-| `created` | DateTime | Date de création               |
-| `updated` | DateTime | Date de dernière mise à jour   |
+| Champ      | Type   | Description                         |
+| ---------- | ------ | ----------------------------------- |
+| `id`       | UUID   | Identifiant unique de l’utilisateur |
+| `name`     | String | Nom complet                         |
+| `email`    | String | Adresse email                       |
+| `password` | String | Mot de passe hashé                  |
+
+✅ **Entité Task**
+
+| Champ         | Type     | Description                    |
+| ------------- | -------- | ------------------------------ |
+| `id`          | Int      | Identifiant unique de la tâche |
+| `title`       | String   | Titre de la tâche              |
+| `description` | String   | Description de la tâche        |
+| `status`      | Enum     | `active` ou `complete`         |
+| `created`     | DateTime | Date de création               |
+| `updated`     | DateTime | Dernière mise à jour           |
 
 ---
 
