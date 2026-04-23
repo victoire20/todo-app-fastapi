@@ -120,8 +120,8 @@ Les fonctionnalités principales sont :
 ---
 
 ### URL Documentation
-* **Docs :** [https://todo-list-api.fastapicloud.dev/docs](https://todo-list-api.fastapicloud.dev/docs)
-* **Redocs :** [https://todo-list-api.fastapicloud.dev/redoc](https://todo-list-api.fastapicloud.dev/redoc)
+* **Docs :** [https://todo-list-api-8526eac4.fastapicloud.dev/docs](https://todo-list-api.fastapicloud.dev/docs)
+* **Redocs :** [https://todo-list-api-8526eac4.fastapicloud.dev/redoc](https://todo-list-api.fastapicloud.dev/redoc)
 
 ---
 
